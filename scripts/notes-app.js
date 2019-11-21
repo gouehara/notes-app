@@ -14,7 +14,7 @@ document.querySelector('#create-note').addEventListener('click', () => {
   const timestamp = moment().valueOf()
 
   notes.push({
-    id: id,
+    id,
     title: '',
     body: '',
     createdAt: timestamp,
@@ -36,7 +36,6 @@ document.querySelector('#filter-by').addEventListener('change', e => {
 
 window.addEventListener('storage', e => {
   if (e.key === 'notes') {
-        console.log(e);
     notes = JSON.parse(e.newValue)
     renderNotes(notes, filters)
   }
