@@ -39,7 +39,7 @@ const generateNoteDOM = note => {
   } else {
     textEl.textContent = 'Unnamed note'
   }
-  noteEl.setAttribute('href', `/edit.html`)
+  noteEl.setAttribute('href', `/notes-app/edit.html#${note.id}`)
   noteEl.appendChild(textEl)
   statusEl.textContent = generateLastEdited(note.updatedAt)
   noteEl.appendChild(statusEl)
